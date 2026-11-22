@@ -1,3 +1,4 @@
+
 {
   "headline": "HouseSystem",
   "menu": [
@@ -11,6 +12,7 @@
               {
                 "layout": "0,0,3,4",
                 "label": "XSMART",
+                "image": "https://timohaneka7-gif.github.io/msx/images/xsmart.jpg",
                 "action": "link:https://app.xsmart.tv"
               },
               {
@@ -27,11 +29,6 @@
                 "layout": "9,0,3,4",
                 "label": "TikTok Lite",
                 "action": "link:https://www.tiktok.com"
-              },
-              {
-                "layout": "0,4,12,2",
-                "label": "Все приложения",
-                "action": "link:https://www.google.com"
               }
             ]
           }
