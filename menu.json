@@ -1,64 +1,37 @@
-
 {
   "headline": "HouseSystem",
   "menu": [
     {
-      "label": "Кино",
+      "label": "Главная",
       "data": {
         "type": "pages",
         "pages": [
           {
             "items": [
               {
-                "layout": "0,0,6,4",
+                "layout": "0,0,3,4",
                 "label": "XSMART",
                 "action": "link:https://app.xsmart.tv"
               },
               {
-                "layout": "6,0,6,4",
+                "layout": "3,0,3,4",
                 "label": "VoKino",
                 "action": "link:https://vokino.co"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "label": "Приложения",
-      "data": {
-        "type": "pages",
-        "pages": [
-          {
-            "items": [
-              {
-                "layout": "0,0,6,4",
-                "label": "Google Go",
-                "action": "link:https://www.google.com"
               },
               {
-                "layout": "6,0,6,4",
-                "label": "TikTok Lite",
-                "action": "link:https://www.tiktok.com"
-              },
-              {
-                "layout": "0,4,6,4",
+                "layout": "6,0,3,4",
                 "label": "YouTube",
                 "action": "link:https://m.youtube.com"
               },
               {
-                "layout": "6,4,6,4",
-                "label": "Часы",
-                "action": "link:https://time.is"
-              }
-            ]
-          },
-          {
-            "items": [
+                "layout": "9,0,3,4",
+                "label": "TikTok Lite",
+                "action": "link:https://www.tiktok.com"
+              },
               {
-                "layout": "0,0,6,4",
-                "label": "Погода",
-                "action": "link:https://www.meteoblue.com"
+                "layout": "0,4,12,2",
+                "label": "Все приложения",
+                "action": "link:https://www.google.com"
               }
             ]
           }
