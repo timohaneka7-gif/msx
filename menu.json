@@ -1,54 +1,44 @@
 {
-  "type": "list",
   "headline": "HouseSystem",
-  "items": [
+  "menu": [
     {
-      "selection": {
-        "important": true,
-        "action": "update:content:underlay:text",
-        "data": {
-          "headline": "XSMART",
-          "text": "Онлайн кинотеатр"
-        }
-      },
-      "image": "https://timohaneka7-gif.github.io/msx/images/xsmart.jpg",
-      "action": "link:https://app.xsmart.tv"
-    },
-    {
-      "selection": {
-        "important": true,
-        "action": "update:content:underlay:text",
-        "data": {
-          "headline": "VoKino",
-          "text": "Кино и сериалы"
-        }
-      },
-      "image": "https://timohaneka7-gif.github.io/msx/images/VoKino.png",
-      "action": "link:https://vokino.co"
-    },
-    {
-      "selection": {
-        "important": true,
-        "action": "update:content:underlay:text",
-        "data": {
-          "headline": "YouTube",
-          "text": "Видеоприложение"
-        }
-      },
-      "image": "https://wals09.github.io/msx/logon/youtube.png",
-      "action": "link:https://www.youtube.com/tv#/"
-    },
-    {
-      "selection": {
-        "important": true,
-        "action": "update:content:underlay:text",
-        "data": {
-          "headline": "TikTok",
-          "text": "Видео и развлечения"
-        }
-      },
-      "image": "https://wals09.github.io/msx/logon/tiktok.png",
-      "action": "link:https://www.tiktok.com"
+      "label": "Главная",
+      "data": {
+        "type": "pages",
+        "pages": [
+          {
+            "items": [
+              {
+                "layout": "0,0,3,4",
+                "label": "XSMART",
+                "image": "https://timohaneka7-gif.github.io/msx/images/xsmart.jpg",
+                "action": "link:https://app.xsmart.tv"
+              },
+              {
+                "layout": "3,0,3,4",
+                "label": "VoKino",
+                "image": "https://timohaneka7-gif.github.io/msx/images/vokino.jpg",
+                "action": "link:https://vokino.co"
+              },
+              {
+                "layout": "6,0,3,4",
+                "label": "YouTube",
+                "action": "link:https://m.youtube.com"
+              },
+              {
+                "layout": "9,0,3,4",
+                "label": "TikTok Lite",
+                "action": "link:https://www.tiktok.com"
+              },
+              {
+                "layout": "0,4,12,2",
+                "label": "Все приложения",
+                "action": "link:https://www.google.com"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
