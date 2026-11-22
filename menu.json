@@ -1,0 +1,25 @@
+{
+  "headline": "HouseSystem",
+  "menu": [
+    {
+      "label": "Кино",
+      "data": "https://google.com"
+    },
+    {
+      "label": "ТВ",
+      "data": "https://google.com"
+    },
+    {
+      "label": "Видео",
+      "data": "https://google.com"
+    },
+    {
+      "label": "Игры",
+      "data": "https://google.com"
+    },
+    {
+      "label": "Сайты",
+      "data": "https://google.com"
+    }
+  ]
+}
