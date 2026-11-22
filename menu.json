@@ -52,7 +52,7 @@
                 "action": "link:https://time.is"
               },
               {
-                "layout": "0,8,6,4",
+                "layout": "0,8,4,2",
                 "label": "Погода",
                 "action": "link:https://www.meteoblue.com"
               }
