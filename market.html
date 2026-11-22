@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>HouseSystem — Маркет</title>
+<style>
+:root{--bg:#101318;--panel:#1a2029;--panel2:#253142;--text:#f4f6f8;--muted:#aab5c2;--accent:#68a7ff;--focus:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:18px Arial,sans-serif}
+header{padding:20px 4vw 14px;background:#151b23;border-bottom:1px solid #303b49}
+h1{margin:0;font-size:30px}
+header p{margin:7px 0 0;color:var(--muted);font-size:15px}
+nav{display:flex;gap:10px;flex-wrap:wrap;padding:14px 4vw}
+button,.app a{font:inherit}
+button{background:var(--panel2);color:var(--text);border:1px solid #465568;border-radius:8px;padding:10px 15px;cursor:pointer}
+button.active{background:#31547c;border-color:var(--accent)}
+button:focus,a:focus{outline:3px solid var(--focus);outline-offset:3px}
+main{padding:0 4vw 30px}
+h2{font-size:21px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.app{background:var(--panel);border:1px solid #303b49;border-radius:10px;padding:15px;min-height:150px;display:flex;flex-direction:column;gap:8px}
+.app h3{margin:0;font-size:20px}
+.app p{margin:0;color:var(--muted);font-size:15px;line-height:1.35;flex:1}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.actions a{display:inline-block;text-decoration:none;color:#fff;background:#31547c;padding:9px 12px;border-radius:7px}
+.actions button{padding:8px 10px;font-size:14px}
+.note{color:var(--muted);font-size:14px;line-height:1.4;margin-top:18px}
+#status{color:#b9d6ff;min-height:22px;font-size:14px;margin:8px 0}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}body{font-size:16px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>HouseSystem Market</h1>
+  <p>Каталог сайтов для Smart TV · версия 1.1 · тестовая сборка</p>
+</header>
+<nav aria-label="Категории">
+  <button class="active" data-filter="all">Все</button>
+  <button data-filter="news">Новости</button>
+  <button data-filter="radio">Радио</button>
+  <button data-filter="useful">Полезное</button>
+  <button data-filter="video">Видео</button>
+  <button data-filter="saved">Избранное</button>
+</nav>
+<main>
+  <div id="status" aria-live="polite">Выбери сайт. Сначала проверяем его на телевизоре.</div>
+  <section class="grid" id="catalog">
+    <article class="app" data-id="tengrinews" data-category="news">
+      <h3>Tengrinews</h3><p>Новости Казахстана. AMP-версия для более простой загрузки.</p>
+      <div class="actions"><a href="https://tengrinews.kz/amp/" target="_blank" rel="noopener">Открыть</a><button type="button" class="save">В избранное</button></div>
+    </article>
+    <article class="app" data-id="topradio" data-category="radio">
+      <h3>TOP-Radio</h3><p>Каталог радиостанций Казахстана. Нужно проверить воспроизведение звука.</p>
+      <div class="actions"><a href="https://top-radio.ru/kazaxstan" target="_blank" rel="noopener">Открыть</a><button type="button" class="save">В избранное</button></div>
+    </article>
+    <article class="app" data-id="calendar" data-category="useful">
+      <h3>Календарь Казахстана</h3><p>Производственный календарь на 2026 год.</p>
+      <div class="actions"><a href="https://lugasoft.ru/calendar/proizvodstvennyj/kz/2026" target="_blank" rel="noopener">Открыть</a><button type="button" class="save">В избранное</button></div>
+    </article>
+    <article class="app" data-id="duckduckgo" data-category="useful">
+      <h3>DuckDuckGo Lite</h3><p>Облегчённая страница интернет-поиска. Кандидат на тест.</p>
+      <div class="actions"><a href="https://lite.duckduckgo.com/" target="_blank" rel="noopener">Открыть</a><button type="button" class="save">В избранное</button></div>
+    </article>
+    <article class="app" data-id="wikipedia" data-category="useful">
+      <h3>Wikipedia</h3><p>Энциклопедия и поиск статей. Кандидат на тест.</p>
+      <div class="actions"><a href="https://ru.wikipedia.org/" target="_blank" rel="noopener">Открыть</a><button type="button" class="save">В избранное</button></div>
+    </article>
+    <article class="app" data-id="openmeteo" data-category="useful">
+      <h3>Open-Meteo</h3><p>Погода и прогноз. Кандидат на тест.</p>
+      <div class="actions"><a href="https://open-meteo.com/" target="_blank" rel="noopener">Открыть</a><button type="button" class="save">В избранное</button></div>
+    </article>
+  </section>
+  <p class="note">Важно: это отдельная тестовая страница. Избранное сохраняется в браузере, если телевизор поддерживает localStorage. Пока оно не подключено к главному меню MSX. Сайты Speedtest, WhatsApp Web и браузерные мини-игры не включены в каталог.</p>
+</main>
+<script>
+(function(){
+  var buttons=document.querySelectorAll('nav button');
+  var cards=document.querySelectorAll('.app');
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem('hs_market_saved')||'{}')||{};}catch(e){saved={};}
+  function render(filter){
+    cards.forEach(function(card){
+      var show=filter==='all'||(filter==='saved'?!!saved[card.getAttribute('data-id')]:card.getAttribute('data-category')===filter);
+      card.style.display=show?'flex':'none';
+      var b=card.querySelector('.save');
+      b.textContent=saved[card.getAttribute('data-id')]?'Убрать':'В избранное';
+    });
+    buttons.forEach(function(b){b.classList.toggle('active',b.getAttribute('data-filter')===filter);});
+  }
+  buttons.forEach(function(b){b.addEventListener('click',function(){render(b.getAttribute('data-filter'));});});
+  cards.forEach(function(card){
+    card.querySelector('.save').addEventListener('click',function(){
+      var id=card.getAttribute('data-id');
+      if(saved[id]) delete saved[id]; else saved[id]=true;
+      try{localStorage.setItem('hs_market_saved',JSON.stringify(saved));document.getElementById('status').textContent='Избранное сохранено в этом браузере.';}
+      catch(e){document.getElementById('status').textContent='Этот браузер не сохраняет избранное после закрытия страницы.';}
+      render(document.querySelector('nav button.active').getAttribute('data-filter'));
+    });
+  });
+  render('all');
+})();
+</script>
+</body>
+</html>
+  
