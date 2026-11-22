@@ -50,9 +50,13 @@
                 "layout": "6,4,6,4",
                 "label": "Часы",
                 "action": "link:https://time.is"
-              },
+              }
+            ]
+          },
+          {
+            "items": [
               {
-                "layout": "0,8,4,2",
+                "layout": "0,0,6,4",
                 "label": "Погода",
                 "action": "link:https://www.meteoblue.com"
               }
