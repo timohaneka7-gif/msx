@@ -1,25 +1,46 @@
+
 {
   "headline": "HouseSystem",
   "menu": [
     {
+      "icon": "movie",
       "label": "Кино",
-      "data": "https://google.com"
+      "data": {
+        "type": "pages",
+        "template": {
+          "type": "default",
+          "layout": "0,0,6,4",
+          "color": "msx-glass"
+        },
+        "items": [
+          {
+            "title": "XSMART",
+            "action": "link:https://app.xsmart.tv"
+          },
+          {
+            "title": "VoKino",
+            "action": "link:https://vokino.co"
+          }
+        ]
+      }
     },
     {
-      "label": "ТВ",
-      "data": "https://google.com"
-    },
-    {
-      "label": "Видео",
-      "data": "https://google.com"
-    },
-    {
-      "label": "Игры",
-      "data": "https://google.com"
-    },
-    {
+      "icon": "web",
       "label": "Сайты",
-      "data": "https://google.com"
+      "data": {
+        "type": "pages",
+        "template": {
+          "type": "default",
+          "layout": "0,0,6,4",
+          "color": "msx-glass"
+        },
+        "items": [
+          {
+            "title": "Сайты добавим позже",
+            "action": "info:Раздел HouseSystem"
+          }
+        ]
+      }
     }
   ]
 }
