@@ -3,41 +3,45 @@
   "headline": "HouseSystem",
   "menu": [
     {
-      "icon": "movie",
       "label": "Кино",
       "data": {
         "type": "pages",
-        "template": {
-          "type": "default",
-          "layout": "0,0,6,4",
-          "color": "msx-glass"
-        },
-        "items": [
+        "pages": [
           {
-            "title": "XSMART",
-            "action": "link:https://app.xsmart.tv"
-          },
-          {
-            "title": "VoKino",
-            "action": "link:https://vokino.co"
+            "items": [
+              {
+                "layout": "0,0,6,4",
+                "label": "XSMART",
+                "action": "link:https://app.xsmart.tv"
+              },
+              {
+                "layout": "6,0,6,4",
+                "label": "VoKino",
+                "action": "link:https://vokino.co"
+              }
+            ]
           }
         ]
       }
     },
     {
-      "icon": "web",
-      "label": "Сайты",
+      "label": "Приложения",
       "data": {
         "type": "pages",
-        "template": {
-          "type": "default",
-          "layout": "0,0,6,4",
-          "color": "msx-glass"
-        },
-        "items": [
+        "pages": [
           {
-            "title": "Сайты добавим позже",
-            "action": "info:Раздел HouseSystem"
+            "items": [
+              {
+                "layout": "0,0,6,4",
+                "label": "Google Go",
+                "action": "link:https://www.google.com"
+              },
+              {
+                "layout": "6,0,6,4",
+                "label": "TikTok Lite",
+                "action": "link:https://www.tiktok.com"
+              }
+            ]
           }
         ]
       }
