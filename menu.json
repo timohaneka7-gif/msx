@@ -18,6 +18,7 @@
               {
                 "layout": "3,0,3,4",
                 "label": "VoKino",
+                "image": "https://timohaneka7-gif.github.io/msx/images/vokino.jpg",
                 "action": "link:https://vokino.co"
               },
               {
@@ -29,6 +30,11 @@
                 "layout": "9,0,3,4",
                 "label": "TikTok Lite",
                 "action": "link:https://www.tiktok.com"
+              },
+              {
+                "layout": "0,4,12,2",
+                "label": "Все приложения",
+                "action": "link:https://www.google.com"
               }
             ]
           }
