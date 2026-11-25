@@ -1,0 +1,29 @@
+{
+  "type": "list",
+  "pages": [
+    {
+      "items": [
+        {
+          "layout": "0,0,12,1",
+          "label": "HouseSystem | Настройки",
+          "action": "info:Настройки системы"
+        },
+        {
+          "layout": "0,1,12,1",
+          "label": "Информация о системе",
+          "action": "info:HouseSystem 1.0 Beta | LG NetCast | Media Station X"
+        },
+        {
+          "layout": "0,2,12,1",
+          "label": "О HouseSystem",
+          "action": "info:Лёгкая система для телевизоров LG NetCast"
+        },
+        {
+          "layout": "0,3,12,1",
+          "label": "Статус",
+          "action": "info:Beta"
+        }
+      ]
+    }
+  ]
+}
