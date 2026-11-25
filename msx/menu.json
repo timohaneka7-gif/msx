@@ -9,10 +9,11 @@
         "pages": [
           {
            {
-            "label": "⚙ Настройки",
-            "action": "link:https://timohaneka7-gif.github.io/msx/msx/settings.html"
-              } "items": [
-              {
+           "label": "⚙ Настройки",
+            "data": "https://timohaneka7-gif.github.io/msx/msx/settings.json"
+             }
+             { "items": [
+              
                 "layout": "0,0,3,4",
                 "label": "XSMART",
                 "image": "https://timohaneka7-gif.github.io/msx/images/xsmart.jpg",
